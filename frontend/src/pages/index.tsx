@@ -54,7 +54,7 @@ export default function Home() {
 
       <div className={styles.login}>
 
-        <h1>Fazer Login!</h1>
+        <h1>Fazer Login</h1>
         <form onSubmit={handleLogin}>
           <Input
             placeholder="Digite seu email"

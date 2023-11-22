@@ -33,6 +33,11 @@ export default function Product({ categoryList }: CategoryProps){
     const [categories, setCategories] = useState(categoryList || [])
     const [categorySelected, setCategorySelected] = useState(0)
 
+    /*
+    const [products, setProducts] = useState(productList || [])
+    const [productSelected, setProductSelected] = useState(0)
+    */
+
     function handleFile(event: ChangeEvent<HTMLInputElement>){
         
         if(!event.target.files){
@@ -59,6 +64,15 @@ export default function Product({ categoryList }: CategoryProps){
 
         setCategorySelected(event.target.value)
     }
+
+    /*
+    function handleChangeProduct(event){
+        
+
+        setProductSelected(event.target.value)
+    }
+
+    */
 
     async function handleRegister(event: FormEvent) {
         event.preventDefault();
@@ -96,6 +110,29 @@ export default function Product({ categoryList }: CategoryProps){
         setAvatarUrl('');
         
     }
+
+    /*
+
+    async function handleDelete(event: FormEvent) {
+        event.preventDefault();
+
+        const product_id = products[productSelected].id
+
+        //console.log(token)
+
+        const api = setupAPIClient ()
+
+
+        await api.delete (`/product?product_id=${product_id}`)
+        .then( () => { window.location.href = "/product" } )
+        .catch(() => console.log('erro'))
+
+
+        
+        
+    }
+
+    */
 
     return(
         <>

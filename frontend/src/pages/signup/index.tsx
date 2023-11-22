@@ -47,13 +47,13 @@ export default function SignUp() {
   return (
     <>
     <Head>
-      <title>Faça seu cadastro agora!</title>
+      <title>Faça seu cadastro</title>
     </Head>
     <div className={styles.containerCenter}>
       <Image src={logoImg} alt="Logo Pizzaria" />
 
       <div className={styles.login}>
-        <h1>Criando sua conta!</h1>
+        <h1>Criando sua conta</h1>
         
 
         <form onSubmit={handleSignUp}>

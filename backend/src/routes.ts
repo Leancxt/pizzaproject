@@ -29,6 +29,7 @@ import { isAuthenticated } from './middlewares/isAuthenticated'
 
 import uploadConfig from './config/multer'
 import { RemoveCategoryController } from './controllers/category/RemoveCategoryController';
+import { RemoveProductController } from './controllers/product/RemoveProductController';
 
 const router = Router();
 
@@ -57,6 +58,8 @@ router.delete('/category', isAuthenticated, new RemoveCategoryController().handl
 router.post('/product', isAuthenticated, upload.single('file'), new CreateProductController().handle )
 
 router.get('/category/product', isAuthenticated, new ListByCategoryController().handle )
+
+router.delete('/product', isAuthenticated, new RemoveProductController().handle)
 
 // -- rotas order --
 router.post('/order', isAuthenticated, new CreateOrderController().handle)
